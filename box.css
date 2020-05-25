@@ -1,1 +1,70 @@
 /* box */
+p {
+  margin: 0;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  color: white;
+  align-self: center;
+  grid-area: block;
+  justify-self: center;
+  z-index: 5;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-areas: "block";
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  margin: auto;
+  width: 150px;
+  height: 150px;
+
+}
+
+.grey{
+  grid-area: block;
+  width: 150px;
+  height: 150px;
+  background-color: #d9d9d9;
+
+}
+
+.black {
+  grid-area: block;
+  width: 150px;
+  height: 150px;
+  background-color: #222;
+  transform: translate(100%, 100%);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-delay: .5s;
+
+}
+
+.wrapper:hover .black{
+  transform:translate(0,0);
+  transition-delay: 0s;
+
+ 
+}
+
+.green {
+  grid-area: block;
+  width: 150px;
+  height: 150px;
+  background-color: #43d27f;
+  transform: translateX(-100%);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-delay: 0s;
+
+}
+
+.wrapper:hover .green {
+  transform: translateX(0);
+  transition-delay: .5s;
+}
